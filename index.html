@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>我的记账本</title>
+    <style>
+        body { font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; }
+        .input-section { margin-bottom: 20px; }
+        input, select, button { padding: 8px; margin: 5px; }
+        #records { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>💰 我的记账本</h1>
+    <div class="input-section">
+        <input type="text" id="item" placeholder="项目（如：午餐）">
+        <input type="number" id="amount" placeholder="金额">
+        <select id="type">
+            <option value="income">收入</option>
+            <option value="expense" selected>支出</option>
+        </select>
+        <button onclick="addRecord()">添加记录</button>
+    </div>
+    <div id="records"></div>
+
+    <script>
+        function addRecord() {
+            const item = document.getElementById('item').value;
+            const amount = document.getElementById('amount').value;
+            const type = document.getElementById('type').value;
+            if (!item || !amount) return alert('请填写完整！');
+
+            const record = { item, amount, type, date: new Date().toLocaleDateString() };
+            let records = JSON.parse(localStorage.getItem('financeRecords')) || [];
+            records.push(record);
+            localStorage.setItem('financeRecords', JSON.stringify(records));
+            displayRecords();
+            document.getElementById('item').value = '';
+            document.getElementById('amount').value = '';
+        }
+
+        function displayRecords() {
+            const records = JSON.parse(localStorage.getItem('financeRecords')) || [];
+            const html = records.map(r => `<p>${r.date} - ${r.item}: <b>${r.amount}元</b> (${r.type === 'income' ? '收入' : '支出'})</p>`).join('');
+            document.getElementById('records').innerHTML = html;
+        }
+        displayRecords();
+    </script>
+</body>
+</html>
