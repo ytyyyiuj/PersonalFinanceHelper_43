@@ -1,4 +1,5 @@
 # PersonalFinanceHelper_43  个人记账助手
+https://ytyyyiuj.github.io/PersonalFinanceHelper_43/
 一个帮助记录日常开销的简易网页应用--开源课程期末作业
 ## 主要功能
 
@@ -9,7 +10,7 @@
 
 ## 如何使用
 
-1.  **在线访问**：本项目已通过 GitHub Pages 部署，可直接访问：[此处稍后填写链接]
+1.  **在线访问**：本项目已通过 GitHub Pages 部署，可直接访问：https://ytyyyiuj.github.io/PersonalFinanceHelper_43/
 2.  **本地运行**：克隆项目到本地后，用浏览器直接打开 `index.html` 文件即可。
 
 ## 技术栈
