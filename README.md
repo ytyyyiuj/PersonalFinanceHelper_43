@@ -1,6 +1,8 @@
 # PersonalFinanceHelper_43  个人记账助手
 https://ytyyyiuj.github.io/PersonalFinanceHelper_43/
 一个帮助记录日常开销的简易网页应用--开源课程期末作业
+<img width="947" height="283" alt="屏幕截图 2025-11-28 221537" src="https://github.com/user-attachments/assets/e4a8cdda-1cb9-44b1-b751-3a301da1ae9a" />
+
 ## 主要功能
 
 *   ➕ 添加新的收入或支出记录
